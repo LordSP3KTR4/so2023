@@ -1,5 +1,12 @@
-//toma 3 notas y saca el promedio segun la ponderacion de la tarea (40%, 30% y 30%) para la 1era, 2da y 3ra nota respectivamente 
-//e indica si pasa o no la asignatura
+//Crear un algoritmo capaz de solicitar 3 notas de un estudiante por pantalla y obtener el
+//promedio ponderado. Este promedio ponderado es de la siguiente forma:
+//Nota 1 = 40%
+//Nota 2 = 30%
+//Nota 3 = 30%
+//Si el estudiante obtiene un promedio inferior a 3.95 se debe imprimir por pantalla que ha
+//reprobado la asignatura, si obtuvo un promedio entre 3.95 a 4.94 el estudiante va a examen.
+//Si la nota es igual o superior a 4.95 el alumno se exime de la asignatura.
+
 #include <stdio.h>
 int main()
 {
@@ -13,8 +20,8 @@ int main()
     printf("tercera nota: ");
     scanf("%f",&n3);
 
-    //revision de que todas las notas sean positivas
-    if (n1 >=1.0 && n2 >=1.0 && n3 >=1.0)
+    //revision de que todas las notas esten dentro del rango valido (1.0 a 7.0)
+    if (n1 >=1.0 && n2 >=1.0 && n3 >=1.0 && n1 <=7.0 && n2 <=7.0 && n3 <=7.0)
     {
         prom_pom= (float)(n1*0.4)+(n2*0.3)+(n3*0.3);
         printf("promedio ponderado es: %.3f \n",prom_pom);

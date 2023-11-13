@@ -7,7 +7,7 @@ semáforos de manera tal, que la secuencia de salida sea ABC,ABC,ABC.*/
 
 sem_t A, B, C;
 
-// Cada función representa los 3 procesos de un program
+// Cada función representa los 3 procesos de un programa
 void *procesoA()
 {
     for (int i = 0; i < 3; ++i)
